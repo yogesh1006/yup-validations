@@ -158,6 +158,7 @@ const FormWithoutYup = () => {
 					placeholder="Enter your first name"
 					onChange={handlechange}
 				/>
+				{errors.firstName && <div className="error">{errors.firstName}</div>}
 			</div>
 			<div>
 				<label>Last Name:</label>
@@ -168,6 +169,7 @@ const FormWithoutYup = () => {
 					placeholder="Enter your last name"
 					onChange={handlechange}
 				/>
+				{errors.lastName && <div className="error">{errors.lastName}</div>}
 			</div>
 			<div>
 				<label>Email:</label>
@@ -178,6 +180,7 @@ const FormWithoutYup = () => {
 					placeholder="Enter your email"
 					onChange={handlechange}
 				/>
+				{errors.email && <div className="error">{errors.email}</div>}
 			</div>
 			<div>
 				<label>Phone Number:</label>
@@ -188,6 +191,9 @@ const FormWithoutYup = () => {
 					placeholder="Enter your phone number"
 					onChange={handlechange}
 				/>
+				{errors.phoneNumber && (
+					<div className="error">{errors.phoneNumber}</div>
+				)}
 			</div>
 
 			<div>
@@ -199,6 +205,7 @@ const FormWithoutYup = () => {
 					placeholder="Enter your password"
 					onChange={handlechange}
 				/>
+				{errors.password && <div className="error">{errors.password}</div>}
 			</div>
 
 			<div>
@@ -210,6 +217,9 @@ const FormWithoutYup = () => {
 					placeholder="Enter your confirm password"
 					onChange={handlechange}
 				/>
+				{errors.confirmPassword && (
+					<div className="error">{errors.confirmPassword}</div>
+				)}
 			</div>
 
 			<div>
@@ -221,6 +231,7 @@ const FormWithoutYup = () => {
 					placeholder="Enter your age"
 					onChange={handlechange}
 				/>
+				{errors.age && <div className="error">{errors.age}</div>}
 			</div>
 
 			<div>
@@ -230,6 +241,7 @@ const FormWithoutYup = () => {
 					<option value="female">Female</option>
 					<option value="other">Other</option>
 				</select>
+				{errors.gender && <div className="error">{errors.gender}</div>}
 			</div>
 
 			<div>
@@ -265,6 +277,7 @@ const FormWithoutYup = () => {
 					/>
 					Reading
 				</label>
+				{errors.interests && <div className="error">{errors.interests}</div>}
 			</div>
 
 			<div>
@@ -276,6 +289,7 @@ const FormWithoutYup = () => {
 					placeholder="Enter your birth date "
 					onChange={handlechange}
 				/>
+				{errors.birthDate && <div className="error">{errors.birthDate}</div>}
 			</div>
 			<button type="submit">Submit</button>
 		</form>
